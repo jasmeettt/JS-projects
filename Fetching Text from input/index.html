@@ -20,13 +20,14 @@
       font-family: Inter;
     }
     .main {
+      padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: #ffffff;
-      height: 50vh;
-      width: 500px;
+      height: auto;
+      width: auto;
       max-width: 800px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -51,7 +52,8 @@
       outline-color: #0c649e;
       outline-style: groove;
     }
-    #Submit {
+    #Submit,
+    #Clear {
       width: 80%;
       height: 30px;
       border: none;
@@ -63,6 +65,10 @@
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
       font-weight: bolder;
     }
+    #Submit:hover,
+    #Clear:hover {
+      background-color: #034aa9;
+    }
   </style>
   <body>
     <div class="main">
@@ -70,12 +76,14 @@
       <input type="text" id="input" class="input-bar" />
       <input type="button" value="Submit" id="Submit" />
       <p id="output">Your last message was: <span></span></p>
+      <input type="button" value="Clear" id="Clear" />
     </div>
   </body>
   <script>
     const input = document.querySelector(".input-bar");
     const output = document.querySelector("span");
     const submit = document.querySelector("#Submit");
+    const clear = document.querySelector("#Clear");
 
     submit.addEventListener("click", function () {
       const message = input.value.trim();
@@ -94,6 +102,11 @@
       if (lastMessage) {
         output.textContent = lastMessage;
       }
+    });
+
+    // clearing last stored Message
+    clear.addEventListener("click", function () {
+      output.textContent = "";
     });
   </script>
 </html>
