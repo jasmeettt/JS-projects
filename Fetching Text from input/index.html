@@ -80,7 +80,7 @@
   <body>
     <div class="main">
       <h2>A Message You Would Like To Pass</h2>
-      <input type="text" id="input" class="input-bar" />
+      <input type="text" id="input" class="input-bar" maxlength="150" />
       <div class="button-container">
         <input type="button" value="Submit" id="Submit" />
         <input type="button" value="Clear" id="Clear" />
@@ -94,6 +94,13 @@
     const submit = document.querySelector("#Submit");
     const clear = document.querySelector("#Clear");
 
+    // input.addEventListener("input", function () {
+    //   const maxLength = input.getAttribute("maxlength");
+    //   if (input.value.length > maxLength) {
+    //     input.value = input.value.slice(0, maxLength);
+    //   }
+    // });
+
     submit.addEventListener("click", function () {
       const message = input.value.trim();
       if (message === "") {
@@ -105,7 +112,7 @@
       }
     });
 
-    // local storage
+    //local storage
     window.addEventListener("load", function () {
       const lastMessage = localStorage.getItem("lastMessage");
       if (lastMessage) {
