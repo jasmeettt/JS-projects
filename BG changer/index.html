@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BG changer</title>
+    <style>
+      body {
+        background-color: #313131;
+        font-family: Inter;
+        color: white;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      p {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h2 draggable="true">Click to change the background !</h2>
+      <p></p>
+    </div>
+  </body>
+  <script>
+    const h2 = document.querySelector("h2");
+    const body = document.querySelector("body");
+    const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+
+    function changeBg() {
+      let hexColor = `#`;
+      for (let i = 0; i < 6; i++) {
+        hexColor += hex[Math.floor(Math.random() * hex.length)];
+      }
+      return hexColor;
+    }
+    h2.addEventListener("click", function () {
+      document.body.style.backgroundColor = changeBg();
+      document.querySelector("p").textContent = changeBg();
+    });
+  </script>
+</html>
