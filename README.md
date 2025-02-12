@@ -12,6 +12,11 @@ Here’s a list of projects I’ve built so far:
    - A simple background changer, where users can click a button and get a random background everytime.
    - **Tech Stack**: HTML, CSS, JavaScript.
 
+### 1. **Fetching Data from User Input**
+   - A straightforward project that allows users to write text and click for it to appear on the screen.
+   - **Tech Stack**: HTML, CSS, JavaScript.
+
+
 ---
 
 ## 🛠️ Technologies Used
