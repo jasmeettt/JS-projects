@@ -9,13 +9,19 @@ Welcome to my **JavaScript Projects Repository**! This is where I showcase my jo
 Here’s a list of projects I’ve built so far:
 
 ### 1. **Background Changer**
-   - A simple background changer, where users can click a button and get a random background everytime.
-   - **Tech Stack**: HTML, CSS, JavaScript.
+
+- A simple background changer, where users can click a button and get a random background everytime.
+- **Tech Stack**: HTML, CSS, JavaScript.
 
 ### 2. **Fetching Data from User Input**
-   - A straightforward project that allows users to write text and click for it to appear on the screen.
-   - **Tech Stack**: HTML, CSS, JavaScript.
 
+- A straightforward project that allows users to write text and click for it to appear on the screen.
+- **Tech Stack**: HTML, CSS, JavaScript.
+
+### 3. **To-Do list**
+
+- A simple, lightweight Todo List built with JavaScript and Local Storage. Add, delete, and persist your tasks effortlessly across sessions. Perfect for staying organized! 🚀
+- **Tech Stack**: HTML, CSS, JavaScript.
 
 ---
 
@@ -32,3 +38,4 @@ Here’s a list of projects I’ve built so far:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/jasmeettt/JS-projects.git
+   ```
