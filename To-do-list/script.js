@@ -42,9 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     li.querySelector("button").addEventListener("click", function (e) {
       e.stopPropagation(); // prevent from toggle from firing
-      tasks = tasks.filter((t) => {
-        t.id !== tasks.id;
-      });
+      tasks = tasks.filter((t) => t.id !== task.id);
       li.remove();
       saveTask();
     });
