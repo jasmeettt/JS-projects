@@ -23,6 +23,11 @@ Here’s a list of projects I’ve built so far:
 - A simple, lightweight Todo List built with JavaScript and Local Storage. Add, delete, and persist your tasks effortlessly across sessions. Perfect for staying organized! 🚀
 - **Tech Stack**: HTML, CSS, JavaScript.
 
+### 4. **Weather API App**
+
+- A sleek and user-friendly Weather App built with JavaScript and the OpenWeatherMap API. Get real-time weather updates for any city, including temperature, humidity, wind speed, and weather conditions. Stay informed about the weather wherever you are! 🌦️
+- **Tech Stack**: HTML, CSS, JavaScript, OpenWetherMap API.
+
 ---
 
 ## 🛠️ Technologies Used
