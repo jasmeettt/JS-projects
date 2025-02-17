@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayWeather(weatherData) {
     // diplays the data
-    console.log(weatherData);
     cityName.textContent = `${weatherData.name}`;
     temperature.textContent = `Temprature: ${weatherData.main.temp}°C`;
     description.textContent = `Description: ${weatherData.weather[0].description}`;
