@@ -107,10 +107,9 @@
       if (message === "") {
         document.querySelector("#output").textContent =
           "Please add some value to add in the storage";
-      } else {
-        output.textContent = message;
-        localStorage.setItem("lastMessage", message);
       }
+      output.textContent = message;
+      localStorage.setItem("lastMessage", message);
     });
 
     //local storage
