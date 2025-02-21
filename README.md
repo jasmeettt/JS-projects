@@ -28,6 +28,11 @@ Here’s a list of projects I’ve built so far:
 - A sleek and user-friendly Weather App built with JavaScript and the OpenWeatherMap API. Get real-time weather updates for any city, including temperature, humidity, wind speed, and weather conditions. Stay informed about the weather wherever you are! 🌦️
 - **Tech Stack**: HTML, CSS, JavaScript, OpenWetherMap API.
 
+### 4. **Simple E-Commerce Project**
+
+- A simple, lightweight E-Commerce website built with JavaScript and Local Storage. Add products to the cart, manage quantities, and persist cart data across sessions. Perfect for a basic online shopping experience! 🚀
+- **Tech Stack**: HTML, CSS, JavaScript.
+
 ---
 
 ## 🛠️ Technologies Used
