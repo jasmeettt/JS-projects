@@ -12,35 +12,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const city = cityInput.value.trim();
     if (!city) return;
 
-    // it may throw an error
-    // sever/database is always in different states
+    // Fetch weather data and handle the response or error
     getWeather(city).then(displayWeather).catch(showError);
+
     cityInput.value = "";
   });
 
   function getWeather(city) {
-    // gets the data
+    // Fetch weather data from the API
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
-    return fetch(url).then((response) => {
-      if (!response.ok) {
-        throw new Error("City not found");
-      }
-      return response.json();
-    });
 
-    function displayWeather(weatherData) {
-      // diplays the data
-      cityName.textContent = `${weatherData.name}`;
-      temperature.textContent = `Temprature: ${weatherData.main.temp}°C`;
-      description.textContent = `Description: ${weatherData.weather[0].description}`;
-      weatherInfo.classList.remove("hidden");
-      errorMessage.classList.add("hidden");
-    }
+    return fetch(url) // Return the fetch promise
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("City not found");
+        }
+        return response.json();
+      });
+  }
 
-    function showError() {
-      // shows an error message
-      weatherInfo.classList.add("hidden");
-      errorMessage.classList.remove("hidden");
-    }
+  function displayWeather(weatherData) {
+    // Display the weather data
+    cityName.textContent = `${weatherData.name}`;
+    temperature.textContent = `Temperature: ${weatherData.main.temp}°C`;
+    description.textContent = `Description: ${weatherData.weather[0].description}`;
+    weatherInfo.classList.remove("hidden");
+    errorMessage.classList.add("hidden");
+  }
+
+  function showError() {
+    // Show an error message
+    weatherInfo.classList.add("hidden");
+    errorMessage.classList.remove("hidden");
   }
 });
