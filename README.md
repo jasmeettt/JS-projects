@@ -33,6 +33,11 @@ Here’s a list of projects I’ve built so far:
 - A simple, lightweight E-Commerce website built with JavaScript and Local Storage. Add products to the cart, manage quantities, and persist cart data across sessions. Perfect for a basic online shopping experience! 🚀
 - **Tech Stack**: HTML, CSS, JavaScript.
 
+### 5. **Expanding Cards Project**
+
+- A visually engaging UI component where cards expand on click, revealing more details in an interactive and smooth manner. Ideal for showcasing images, content previews, or portfolio items! ✨
+- **Tech Stack**: HTML, CSS, JavaScript.
+
 ---
 
 ## 🛠️ Technologies Used
