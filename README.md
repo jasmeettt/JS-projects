@@ -38,6 +38,11 @@ Here’s a list of projects I’ve built so far:
 - A visually engaging UI component where cards expand on click, revealing more details in an interactive and smooth manner. Ideal for showcasing images, content previews, or portfolio items! ✨
 - **Tech Stack**: HTML, CSS, JavaScript.
 
+### 7. **Progress Steps**
+
+- A visually engaging UI component where cards expand on click, revealing more details in an interactive and smooth manner. Ideal for showcasing images, content previews, or portfolio items! ✨
+- **Tech Stack**: HTML, CSS, JavaScript.
+
 ---
 
 ## 🛠️ Technologies Used
