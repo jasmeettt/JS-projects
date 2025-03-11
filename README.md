@@ -43,6 +43,11 @@ Here’s a list of projects I’ve built so far:
 - A visually engaging UI component where cards expand on click, revealing more details in an interactive and smooth manner. Ideal for showcasing images, content previews, or portfolio items! ✨
 - **Tech Stack**: HTML, CSS, JavaScript.
 
+### 7. **Rotating Navigation**
+
+- A visually engaging UI component where the navigation menu smoothly rotates into view when toggled, creating a dynamic and interactive user experience. Perfect for modern websites looking to add a unique touch to their navigation! 🔄✨
+- **Tech Stack**: HTML, CSS, JavaScript.
+
 ---
 
 ## 🛠️ Technologies Used
