@@ -43,9 +43,24 @@ Here’s a list of projects I’ve built so far:
 - A visually engaging UI component where cards expand on click, revealing more details in an interactive and smooth manner. Ideal for showcasing images, content previews, or portfolio items! ✨
 - **Tech Stack**: HTML, CSS, JavaScript.
 
-### 7. **Rotating Navigation**
+### 8. **Rotating Navigation**
 
 - A visually engaging UI component where the navigation menu smoothly rotates into view when toggled, creating a dynamic and interactive user experience. Perfect for modern websites looking to add a unique touch to their navigation! 🔄✨
+- **Tech Stack**: HTML, CSS, JavaScript.
+
+### 9. **Blurry Loading Page**
+
+- A visually appealing UI effect where the content gradually becomes clear as the page loads, enhancing the user experience with a smooth transition. Ideal for modern websites looking to add a professional and engaging touch to their loading process! ✨🔄
+- **Tech Stack**: HTML, CSS, JavaScript.
+
+### 10. **Scroll Animation Project**
+
+- A smooth and engaging UI effect where content elements slide into view as the user scrolls down the page. This enhances the visual appeal and improves user engagement by dynamically revealing elements at the right time. Perfect for interactive websites and landing pages! ✨📜
+- **Tech Stack**: HTML, CSS, JavaScript.
+
+### 11. **Hidden Search Widget**
+
+- A sleek and interactive UI component where the search bar remains hidden by default and smoothly expands when the search button is clicked. This enhances user experience by keeping the interface clean while providing easy access to search functionality. Perfect for minimalistic and modern web designs! 🔍✨
 - **Tech Stack**: HTML, CSS, JavaScript.
 
 ---
