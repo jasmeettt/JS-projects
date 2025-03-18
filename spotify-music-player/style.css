@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Signika Negative", "Helvetica Neue";
+}
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#313131, #151515);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  width: 95vw;
+  height: 95vh;
+  background: linear-gradient(to right, #313234, #2f3031);
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.player-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.player-btn {
+  width: 4rem;
+  height: 4rem;
+  border: 0.2rem solid rgba(255 255 255, 0.1);
+  border-radius: 50%;
+  background-color: #2b2c2e;
+  color: #a8a9ab;
+  cursor: pointer;
+  box-shadow: 0.5rem 0.5rem 2rem -0.1rem rgba(0, 0, 0, 0.5),
+    -0.4rem -0.4rem 2rem -0.1rem rgba(255, 255, 255, 0.2);
+}
+
+.player-btn:active {
+  transform: translateY(0.2rem);
+}
+
+.player-top span {
+  font-size: 1.3rem;
+  color: #a8a9ab;
+}
+
+.player-body {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-song {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transform: rotateZ(-15deg);
+  box-shadow: 0.6rem 0.6rem 4rem -0.1rem rgba(0, 0, 0, 0.9),
+    -0.6rem -0.6rem 4rem -0.2rem rgba(255, 255, 255, 0.2);
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  background-color: #101112;
+  border-radius: 50%;
+}
+
+.rotate {
+  animation: coverRotate 10s linear infinite;
+}
+
+@keyframes coverRotate {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.cover span {
+  font-family: "Delicious Handrawn";
+  position: absolute;
+  display: flex;
+}
+
+.cover span:nth-child(1) {
+  font-size: 1.6rem;
+  color: #ffffff;
+  top: 40%;
+  left: 40%;
+}
+
+.cover span:nth-child(2) {
+  font-size: 2.5rem;
+  color: #ffffff;
+  top: 50%;
+  left: 30%;
+  width: 10rem;
+  text-align: center;
+}
+
+.song-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-name {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.song-artist {
+  font-size: 1.2rem;
+  color: #a8a9ab;
+}
+
+.song-info #heart {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  background: linear-gradient(to right, #3baa7a, #62bc68);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.song-time {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #0c0c0d;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  position: relative;
+}
+
+.song-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(to right, #3baa7a, #62bc68);
+  border-radius: 0.5rem;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.time span {
+  font-size: 1.2rem;
+  color: #a8a9ab;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.play-pause {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  background: linear-gradient(to right, #3baa7a, #62bc68);
+  color: #fff;
+  box-shadow: 0.5rem 0.5rem 2rem -0.1rem rgba(0, 0, 0, 0.8),
+    -0.8rem -0.8rem 4rem -0.1rem rgba(255, 255, 255, 0.4);
+}
+
+.player-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.player-footer .fa-list {
+  font-size: 2rem;
+  color: #a8a9ab;
+}
+
+.player-footer .fa-music {
+  font-size: 2rem;
+  color: #a8a9ab;
+}
+
+.player-footer span {
+  font-size: 1.2rem;
+  color: #a8a9ab;
+}
