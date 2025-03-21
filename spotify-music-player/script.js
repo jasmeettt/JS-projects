@@ -61,7 +61,6 @@ function pauseSong() {
 }
 
 playPauseBtn.addEventListener("click", function () {
-  console.log(songIndex);
   const icon = playPauseBtn.querySelector("i");
 
   if (container.classList.contains("pause")) {
@@ -95,4 +94,46 @@ function nextSongPlay() {
 prevBtn.addEventListener("click", prevSongPlay);
 nextBtn.addEventListener("click", nextSongPlay);
 
+audio.addEventListener("timeupdate", (e) => {
+  const currentTime = e.target.currentTime;
+  const duration = e.target.duration;
+  const currentTimeWidth = (currentTime / duration) * 100;
+  songProgress.style.width = `${currentTimeWidth}%`;
 
+  let songCurrentTime = document.querySelector(".time span:nth-child(1)");
+  let songDuration = document.querySelector(".time span:nth-child(2)");
+
+  audio.addEventListener("loadedmetadata", () => {
+    // song duration modify
+    let audioDuration = audio.duration;
+    let totalMinutes = Math.floor(audioDuration / 60);
+    let totalSeconds = Math.floor(audioDuration % 60);
+
+    if (totalSeconds < 10) {
+      totalSeconds = `0${totalSeconds}`;
+    }
+    songDuration.textContent = `${totalMinutes}:${totalSeconds}`;
+  });
+  // current time modify
+  let currentMinutes = Math.floor(currentTime / 60);
+  let currentSecond = Math.floor(currentTime % 60);
+
+  if (currentSecond < 10) {
+    currentSecond = `0${currentSecond}`;
+  }
+  songCurrentTime.textContent = `${currentMinutes}:${currentSecond}`;
+});
+
+songTime.addEventListener("click", (e) => {
+  // dragable
+  let progressWidth = songTime.clientWidth;
+  let clickedOffset = e.offsetX;
+  let songDuration = audio.duration;
+  audio.currentTime = (clickedOffset / progressWidth) * songDuration;
+  playSong();
+});
+
+audio.addEventListener("ended", () => {
+  // next Song Play
+  nextSongPlay();
+});
