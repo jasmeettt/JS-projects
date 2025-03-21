@@ -47,6 +47,19 @@ function loadSong(index) {
   songName.textContent = songData[index].name;
   songArtist.textContent = songData[index].artist;
   audio.src = `audio/${songData[index].src}`;
+
+  audio.addEventListener("loadedmetadata", () => {
+    let audioDuration = audio.duration;
+    let totalMinutes = Math.floor(audioDuration / 60);
+    let totalSeconds = Math.floor(audioDuration % 60);
+
+    if (totalSeconds < 10) {
+      totalSeconds = `0${totalSeconds}`;
+    }
+    document.querySelector(
+      ".time span:nth-child(2)"
+    ).textContent = `${totalMinutes}:${totalSeconds}`;
+  });
 }
 
 function playSong() {
@@ -103,17 +116,6 @@ audio.addEventListener("timeupdate", (e) => {
   let songCurrentTime = document.querySelector(".time span:nth-child(1)");
   let songDuration = document.querySelector(".time span:nth-child(2)");
 
-  audio.addEventListener("loadedmetadata", () => {
-    // song duration modify
-    let audioDuration = audio.duration;
-    let totalMinutes = Math.floor(audioDuration / 60);
-    let totalSeconds = Math.floor(audioDuration % 60);
-
-    if (totalSeconds < 10) {
-      totalSeconds = `0${totalSeconds}`;
-    }
-    songDuration.textContent = `${totalMinutes}:${totalSeconds}`;
-  });
   // current time modify
   let currentMinutes = Math.floor(currentTime / 60);
   let currentSecond = Math.floor(currentTime % 60);
