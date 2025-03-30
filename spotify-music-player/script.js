@@ -74,14 +74,14 @@ function pauseSong() {
 }
 
 playPauseBtn.addEventListener("click", function () {
-  const icon = playPauseBtn.querySelector("i");
+  let icon = playPauseBtn.querySelector("i"); // Ensure correct icon selection
 
   if (container.classList.contains("pause")) {
     pauseSong();
-    icon.className = "fas fa-play";
+    icon.classList.replace("fa-pause", "fa-play"); // Use classList.replace()
   } else {
     playSong();
-    icon.className = "fas fa-pause";
+    icon.classList.replace("fa-play", "fa-pause"); // Use classList.replace()
   }
 });
 
