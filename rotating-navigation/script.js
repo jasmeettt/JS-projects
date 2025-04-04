@@ -3,7 +3,6 @@ const close = document.getElementById("close");
 const container = document.getElementById("container");
 
 open.addEventListener("click", () => {
-  console.log("hello world");
   container.classList.add("show-nav");
 });
 
