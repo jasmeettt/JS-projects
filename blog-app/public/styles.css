@@ -1,0 +1,143 @@
+/* Reset and Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  color: hotpink;
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+  font-size: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+span {
+  font-size: 20px;
+  color: antiquewhite;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: rgba(224, 212, 212, 0.1);
+  border: 1px solid hotpink;
+  font-size: 16px;
+  width: fit-content;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  color: hotpink;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  background-color: hotpink;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid hotpink;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: hotpink;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: fit-content;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid hotpink;
+  color: hotpink;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: hotpink;
+  color: white;
+  transform: scale(1.05);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hotpink;
+  border-radius: 10px;
+  border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff69b4;
+}

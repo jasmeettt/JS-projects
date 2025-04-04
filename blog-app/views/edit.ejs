@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="favicon"
+      href="/blog-app/static/images/icons8-google-blog-search-50.png"
+      type="png"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Edit</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/posts/<%= post.id  %>/?_method=PUT" method="post">
+        <input type="text" value="<%= post.title%>" name="title" required />
+        <textarea name="content" id="content"><%= post.content %></textarea>
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </body>
+</html>

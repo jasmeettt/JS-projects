@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/blog-app/static/images/icons8-google-blog-search-50.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <title><%= post.title %></title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Blog Title: <span><%= post.title %></span></h2>
+      <h2>Blog Content: <span><%= post.content %></span></h2>
+
+      <div class="btn">
+        <a href="/posts/<%=post.id%>/edit">Edit</a>
+        <a href="/">Back</a>
+      </div>
+      <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  </body>
+</html>
