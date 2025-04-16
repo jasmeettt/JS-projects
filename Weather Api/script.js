@@ -1,3 +1,4 @@
+"use strict";
 document.addEventListener("DOMContentLoaded", function () {
   const cityInput = document.getElementById("city-input");
   const getWeatherButton = document.getElementById("get-weather-btn");
